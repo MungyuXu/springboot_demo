@@ -23,10 +23,10 @@ import java.io.Serializable;
 public class Order extends Model<Order> {
     private static  final  long serialVersionUID=1L;
 
-    @TableId(value = "orderId",type = IdType.AUTO)
+    @TableId(value = "OrderID",type = IdType.AUTO)
     private  Integer orderId;
 
-    @TableField("productId")
+    @TableField("ProductID")
     private Integer productId;
 
     @Override
