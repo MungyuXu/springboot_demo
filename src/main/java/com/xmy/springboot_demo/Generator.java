@@ -29,7 +29,7 @@ public class Generator {
     // 数据库表
     public static String[] tables = {
             "order",
-            "aa",
+//            "aa",
     };
 
     public static void main(String[] args) {
