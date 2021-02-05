@@ -1,7 +1,7 @@
 package com.xmy.springboot_demo.controller;
 
-import com.xmy.springboot_demo.domain.Order;
-import com.xmy.springboot_demo.service.IOrderService;
+import com.xmy.springboot_demo.domain.UserDO;
+import com.xmy.springboot_demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +19,10 @@ import java.util.List;
 @RequestMapping("order")
 public class OrderController {
     @Autowired
-    IOrderService orderService;
+    UserService orderService;
 
     @GetMapping("getAll")
-    public List<Order> getAllPage(){
-        return orderService.getAllOrder();
+    public List<UserDO> getAllUser() {
+        return orderService.getAllUser();
     }
 }

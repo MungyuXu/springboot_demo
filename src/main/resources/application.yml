@@ -1,11 +1,10 @@
 spring:
   application:
     name: TestDemo
-
   datasource:
-    url: jdbc:mysql://172.17.17.12:3306/orderdb?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    username: fengchaoyang
-    password: Password@01
+    username: sunjie
+    password: 970306
+    url: jdbc:mysql://47.106.8.7:3306/db_test?useUnicode=true&characterEncoding=utf-8&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 

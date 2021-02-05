@@ -1,8 +1,8 @@
 package com.xmy.springboot_demo.service.impl;
 
-import com.xmy.springboot_demo.domain.Order;
-import com.xmy.springboot_demo.manager.OrderManager;
-import com.xmy.springboot_demo.service.IOrderService;
+import com.xmy.springboot_demo.domain.UserDO;
+import com.xmy.springboot_demo.manager.UserManager;
+import com.xmy.springboot_demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,12 +16,13 @@ import java.util.List;
  */
 @Slf4j
 @Service
-public class  OrderServiceImpl implements IOrderService {
+public class UserServiceImpl implements UserService {
+
     @Autowired
-    OrderManager orderManager;
+    private UserManager userManager;
 
     @Override
-    public List<Order> getAllOrder() {
-        return orderManager.getAllOrder();
+    public List<UserDO> getAllUser() {
+        return userManager.list();
     }
 }
