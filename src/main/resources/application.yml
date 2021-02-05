@@ -1,0 +1,24 @@
+server:
+  port: 8090
+mybatis:
+  type-aliases-package: com.xmy.springboot_demo.pojo
+  mapper-locations: classpath:com/xmy/springboot_demo/mapper/*.xml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.17.17.12/orderdb?characterEncoding=UTF-8
+    username: fengchaoyang
+    password: Password@01
+  jackson:
+    date-format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+    time-zone: GMT+8
+  devtools:
+    restart:
+      enabled: true
+qiniu:
+  accessKey: 0oz4PSyKAiyNDGXcwWtzPVBN3k7-oefXinJdV4fn
+  secretKey: PXwJCRkl8T2ikPvxN7HKyhHSpk_luVAgMDl5yLmr
+  bucketName: hokitlee
+logging:
+  level:
+    com.baomidou.mybatisplus.samples.pagination: debug
