@@ -1,7 +1,7 @@
 server:
   port: 8090
 mybatis:
-  type-aliases-package: com.xmy.springboot_demo.pojo
+  type-aliases-package: com.xmy.springboot_demo.domain
   mapper-locations: classpath:com/xmy/springboot_demo/mapper/*.xml
 spring:
   datasource:
@@ -18,7 +18,7 @@ spring:
 qiniu:
   accessKey: 0oz4PSyKAiyNDGXcwWtzPVBN3k7-oefXinJdV4fn
   secretKey: PXwJCRkl8T2ikPvxN7HKyhHSpk_luVAgMDl5yLmr
-  bucketName: hokitlee
+  bucketName: mengyu
 logging:
   level:
     com.baomidou.mybatisplus.samples.pagination: debug
