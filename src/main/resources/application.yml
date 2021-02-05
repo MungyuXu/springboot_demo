@@ -1,24 +1,44 @@
-server:
-  port: 8090
-mybatis:
-  type-aliases-package: com.xmy.springboot_demo.pojo
-  mapper-locations: classpath:com/xmy/springboot_demo/mapper/*.xml
 spring:
+  application:
+    name: TestDemo
+
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://172.17.17.12:3306/orderdb?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     username: fengchaoyang
     password: Password@01
-  jackson:
-    date-format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
-    time-zone: GMT+8
-  devtools:
-    restart:
-      enabled: true
-qiniu:
-  accessKey: 0oz4PSyKAiyNDGXcwWtzPVBN3k7-oefXinJdV4fn
-  secretKey: PXwJCRkl8T2ikPvxN7HKyhHSpk_luVAgMDl5yLmr
-  bucketName: hokitlee
-logging:
-  level:
-    com.baomidou.mybatisplus.samples.pagination: debug
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  # 控制台高亮输出
+  output:
+    ansi:
+      enabled: always
+
+server:
+  port: 8080
+
+mybatis-plus:
+  #  mapper文件位置 Maven 多模块项目的扫描路径需以 classpath*: 开头 （即加载多个 jar 包下的 XML 文件）
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  #  MyBaits 别名包扫描路径，通过该属性可以给包中的类注册别名 可直接使用类名
+  type-aliases-package: com.book.dal.domain
+  configuration:
+    #    驼峰法
+    map-underscore-to-camel-case: true
+    #    懒加载
+    aggressive-lazy-loading: false
+    #    开启缓存
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #      主键增长类型
+      id-type: auto
+      #      字段判断策略
+      field-strategy: not_empty
+      #      逻辑删除配置
+      logic-delete-field: is_deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
