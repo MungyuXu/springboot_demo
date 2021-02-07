@@ -1,6 +1,7 @@
 package com.xmy.springboot_demo.service;
 
 import com.xmy.springboot_demo.domain.UserRoleDO;
+import com.xmy.springboot_demo.dto.UserRoleDto;
 
 import java.util.List;
 
@@ -11,4 +12,8 @@ import java.util.List;
  */
 public interface UserRoleService {
     public List<UserRoleDO> getAll();
+
+//    user与userrole关联查询
+    public  List<UserRoleDto> getUserRole();
+
 }

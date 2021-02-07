@@ -1,6 +1,7 @@
 package com.xmy.springboot_demo.controller;
 
 import com.xmy.springboot_demo.domain.UserRoleDO;
+import com.xmy.springboot_demo.dto.UserRoleDto;
 import com.xmy.springboot_demo.manager.UserRoleManager;
 import com.xmy.springboot_demo.service.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +26,10 @@ public class UserRoleController {
     @GetMapping("getAll")
     public List<UserRoleDO> getAll(){
         return  userRoleService.getAll();
+    }
+
+    @GetMapping("getUserRole")
+    public  List<UserRoleDto> getUserRole(){
+        return  userRoleService.getUserRole();
     }
 }
