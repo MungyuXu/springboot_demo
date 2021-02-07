@@ -6,6 +6,7 @@ import com.xmy.springboot_demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -25,4 +26,20 @@ public class UserServiceImpl implements UserService {
     public List<UserDO> getAllUser() {
         return userManager.list();
     }
+
+    @Override
+    public boolean addUser(UserDO user) {
+
+        return userManager.save(user);
+    }
+
+    @Override
+    public boolean deleteUser(Integer id) {
+        return userManager.removeById(id);
+    }
+
+    @Override
+    public boolean updateUser( UserDO userDO) {
+        return   userManager.updateById(userDO);
+            }
 }

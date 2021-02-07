@@ -16,4 +16,10 @@ public interface UserService {
      * @return
      */
     List<UserDO> getAllUser();
+
+    boolean addUser(UserDO user);
+
+    boolean deleteUser(Integer id);
+
+    boolean updateUser(UserDO userDO);
 }
