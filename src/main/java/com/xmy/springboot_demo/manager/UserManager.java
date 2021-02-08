@@ -2,6 +2,9 @@ package com.xmy.springboot_demo.manager;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xmy.springboot_demo.domain.UserDO;
+import com.xmy.springboot_demo.dto.UserRoleDto;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,5 +16,6 @@ import com.xmy.springboot_demo.domain.UserDO;
  */
 public interface UserManager extends IService<UserDO> {
 
+    List<UserRoleDto> queryUserAndRole();
 
 }

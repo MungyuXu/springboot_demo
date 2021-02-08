@@ -1,6 +1,7 @@
 package com.xmy.springboot_demo.service;
 
 import com.xmy.springboot_demo.domain.UserDO;
+import com.xmy.springboot_demo.dto.UserRoleDto;
 
 import java.util.List;
 
@@ -22,4 +23,11 @@ public interface UserService {
     boolean deleteUser(Integer id);
 
     boolean updateUser(UserDO userDO);
+
+
+    /**
+     * 查询用户和他有的权限
+     * @return
+     */
+    List<UserRoleDto> queryUserAndRole();
 }

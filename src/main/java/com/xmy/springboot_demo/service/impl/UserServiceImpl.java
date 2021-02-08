@@ -1,6 +1,7 @@
 package com.xmy.springboot_demo.service.impl;
 
 import com.xmy.springboot_demo.domain.UserDO;
+import com.xmy.springboot_demo.dto.UserRoleDto;
 import com.xmy.springboot_demo.manager.UserManager;
 import com.xmy.springboot_demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -42,4 +43,9 @@ public class UserServiceImpl implements UserService {
     public boolean updateUser( UserDO userDO) {
         return   userManager.updateById(userDO);
             }
+
+    @Override
+    public List<UserRoleDto> queryUserAndRole() {
+        return userManager.queryUserAndRole();
+    }
 }
