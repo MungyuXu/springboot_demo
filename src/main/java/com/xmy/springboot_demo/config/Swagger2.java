@@ -1,4 +1,4 @@
-package com.xmy.springboot_demo;
+package com.xmy.springboot_demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @description:
  */
 @Configuration
-@EnableSwagger2
 public class Swagger2 implements WebMvcConfigurer {
 
     /**

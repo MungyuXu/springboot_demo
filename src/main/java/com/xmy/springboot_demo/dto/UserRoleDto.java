@@ -3,7 +3,6 @@ package com.xmy.springboot_demo.dto;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-import java.net.Inet4Address;
 
 /**
  * @author: 徐梦雨
