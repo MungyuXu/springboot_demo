@@ -38,6 +38,7 @@ public class UserRoleServiceImpl implements UserRoleService {
       return   userRoleManager.list();
     }
 
+//    list和map实现多表查询,未用到自写sql语句
     @Override
     public List<UserRoleDto> getUserRole() {
 //        QueryWrapper<UserRoleDto> queryWrapper =new QueryWrapper<>();
