@@ -12,9 +12,11 @@ import java.util.Random;
  */
 public class Test {
 
+public  int a(){
+    return 1;
+}
 
-    public static void main(String[] args) {
-
-        UserDO userDO;
-    }
+public  int b(){
+    return 2;
+}
 }
