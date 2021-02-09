@@ -14,7 +14,7 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 /**
  * @author: 徐梦雨
  * @date: 2021/2/8 16:39
- * @description:
+ * @description:可用于generator生成，测试通过
  */
 public class Generator {
     public static void main(String[] args) {
