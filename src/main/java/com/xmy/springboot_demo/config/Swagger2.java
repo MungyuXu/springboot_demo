@@ -44,10 +44,10 @@ public class Swagger2 implements WebMvcConfigurer {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot中使用Swagger2构建RESTful APIs")
+                .title("徐梦雨的接口文档")
                 .description("更多请关注http://www.baidu.com")
                 .termsOfServiceUrl("http://www.baidu.com")
-                .contact("sunf")
+//                .contact("sunf")
                 .version("1.0")
                 .build();
     }
